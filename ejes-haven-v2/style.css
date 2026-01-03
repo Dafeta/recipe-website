@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --primary-color: #ff6f61;
+    --primary-color: #fc4a3a;
     --secondary-color: #4caf50;
-    --font-family: 'Poppins, Inter', sans-serif;
     --background-color: #f9f9f9;
-    --text-color: #333333;
+    --text-color: #222;
+    --secondary-text-color: #444;
+    --font-family: 'Poppins', sans-serif;
+    --sub-text: 'Inter', sans-serif;
+    /* Add font-size */
 }
 
 * {
@@ -39,5 +42,94 @@ nav {
 body {
     background-color: var(--background-color);
     font-family: var(--font-family);
-    /* --font-family: 'Poppins', sans-serif; */
+    margin: 0 auto;
+    line-height: 1.6;
+    /* position: relative; */
+    /* Add font-size */
+}
+
+.logo-section h1 {
+    font-family: var(--font-family);
+    color: var(--primary-color);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    /* max-width: 1200px; */
+    margin: auto;
+    box-shadow: 0 8px 8px -2px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+    padding-right: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.actions-section {
+    display: flex;
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.search-section .search {
+    padding: 1rem 1.8rem;
+    border: none;
+    border-radius: 20px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    font-family: var(--sub-text);
+    background-color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.search-section .search::placeholder {
+    color: #fff;
+}
+
+.search-section .search-button {
+    background-color: var(--primary-color);
+    padding: 1rem 0.8rem;
+    border: none;
+    border-radius: 18px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-left: -10px;
+    cursor: pointer;
+}
+
+.theme-toggle {
+    background-color: #f3f3f3;
+    padding: 1rem;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.theme-toggle .fa-moon {
+    font-size: 16px;
 }
