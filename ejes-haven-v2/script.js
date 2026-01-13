@@ -1,3 +1,4 @@
+// Navbar scroll effect
 const navbar = document.getElementById("nav");
 
 if (navbar) {
@@ -9,3 +10,35 @@ if (navbar) {
     }
   });
 }
+
+// Sidebar toggle functionality
+const menuButton = document.getElementById("sidebar-menu-button");
+const sidebar = document.getElementById("sidebar-links-section");
+const closeButton = document.getElementById("close-button");
+
+if (menuButton && sidebar) {
+  menuButton.addEventListener("click", () => {
+    sidebar.classList.add("active");
+  });
+}
+
+if (closeButton && sidebar) {
+  closeButton.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+  });
+}
+
+// Close sidebar when a link is clicked
+const sidebarLinks = document.querySelectorAll(".sidebar-links a");
+if (sidebarLinks.length && sidebar) {
+  sidebarLinks.forEach((link) =>
+    link.addEventListener("click", () => sidebar.classList.remove("active"))
+  );
+}
+
+// Close with Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && sidebar && sidebar.classList.contains("active")) {
+    sidebar.classList.remove("active");
+  }
+});

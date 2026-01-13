@@ -11,6 +11,7 @@
   <title>Recipe website</title>
 </head>
 <body>
+  <!-- BEGINNING OF NAV BAR -->
   <header class="header">
     <nav class="nav" id="nav">
       <div class="logo-section">
@@ -38,8 +39,29 @@
           <i class="fa fa-moon"></i>
         </button>
       </div>
+
+      <!-- Mobile menu Section - Sidebar -->
+      <div class="sidebar">
+        <button class="sidebar-menu-button" id="sidebar-menu-button">
+          <i class="fa fa-bars" style="font-size: 16px;"></i>
+        </button>
+
+        <div class="sidebar-links-section" id="sidebar-links-section">
+          <button class="close-button" id="close-button">
+            <i class="fa fa-times" style="font-size: 16px;"></i>
+          </button>
+          <ul class="sidebar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#tips" id="tips">Healthy Tips</a></li>
+            <li><a href="#contact" id="contact">Contact</a></li>
+          </ul>
+        </div>
     </nav>  
   </header>
+  <!-- END OF NAV BAR -->
+
 
   <main>
     <section class="hero">
@@ -210,8 +232,11 @@
       </div>
     </div>
   </footer>
-      
-   
+    <!-- CHALLENGES FACED -->
+   <!-- 
+    -Nav Bar: Making it responsive and adding a sidebar for mobile view. 
+   -->
+
      <!-- like "Discover Delicious Recipes from Around the World" with a short description below it.
    <div style="height: 50%; width: 50%; background-color: #FF5733;">primary</div>
    <div style="height: 50%; width: 50%; background-color: #222222;">dark text</div>
