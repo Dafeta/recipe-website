@@ -29,16 +29,16 @@ if (closeButton && sidebar) {
 }
 
 // Close sidebar when a link is clicked
-const sidebarLinks = document.querySelectorAll(".sidebar-links a");
-if (sidebarLinks.length && sidebar) {
-  sidebarLinks.forEach((link) =>
-    link.addEventListener("click", () => sidebar.classList.remove("active"))
-  );
-}
+// const sidebarLinks = document.querySelectorAll(".sidebar-links a");
+// if (sidebarLinks.length && sidebar) {
+//   sidebarLinks.forEach((link) =>
+//     link.addEventListener("click", () => sidebar.classList.remove("active"))
+//   );
+// }
 
 // Close with Escape key
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && sidebar && sidebar.classList.contains("active")) {
-    sidebar.classList.remove("active");
-  }
-});
+// document.addEventListener("keydown", (e) => {
+//   if (e.key === "Escape" && sidebar && sidebar.classList.contains("active")) {
+//     sidebar.classList.remove("active");
+//   }
+// });
