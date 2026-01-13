@@ -28,13 +28,6 @@ if (closeButton && sidebar) {
   });
 }
 
-// Close sidebar when a link is clicked
-// const sidebarLinks = document.querySelectorAll(".sidebar-links a");
-// if (sidebarLinks.length && sidebar) {
-//   sidebarLinks.forEach((link) =>
-//     link.addEventListener("click", () => sidebar.classList.remove("active"))
-//   );
-// }
 
 // Close with Escape key
 // document.addEventListener("keydown", (e) => {
@@ -42,3 +35,5 @@ if (closeButton && sidebar) {
 //     sidebar.classList.remove("active");
 //   }
 // });
+
+

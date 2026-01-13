@@ -23,8 +23,6 @@ body {
     margin: 0 auto;
     min-height: 100vh;
     line-height: 1.6;
-    /* background: url(./images/hero-image2.jpg) no-repeat center center/cover;
-    background-attachment: fixed; */
     /* padding: 0 2.8rem; */
     /* position: relative; */
     /* Add font-size */
@@ -238,20 +236,58 @@ nav {
     color: var(--primary-color);
 }
 /* Sidebar styles - End */
+
 /* END OF NAV BAR */
 
-/* .hero {
-    background-image: url(./images/hero-image.jpg);
-    background-position: center;
+/* BEGINNING OF HERO SECTION */
+.hero {
+    background: url(./images/hero-image.jpg) no-repeat center;
     background-size: cover;
-    background-repeat: none;
-    min-height: 100%;
-} */
+    /* background-attachment: fixed; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-texts {
+    text-align: center;
+    /* color: var(--text-color); */
+    color: #000;
+    margin-top: 2rem;
+    flex-shrink: 0;
+}
+
+.hero-texts h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.hero-texts h2 span {
+    color: var(--primary-color);
+}
+
+.hero-texts p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 1rem;
+    font-family: var(--sub-text);
+}
+
+
+
+
+
+/* END OF HERO SECTION */
 
 .food-images {
     width: 15%;
     height: 15%;
 }
+
+
+
+
 
 /* RESPONSIVENESS */
 @media (max-width: 767px) {
