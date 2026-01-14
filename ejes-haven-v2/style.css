@@ -244,7 +244,7 @@ nav {
 .hero {
     background: url(./images/hero-image.jpg) no-repeat center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: calc(100vh - 15vh);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,7 +262,7 @@ nav {
 }
 
 .hero-texts h2 {
-    font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+    font-size: clamp(1.2rem, 2.5vw, 3.5rem);
     margin-bottom: 0.4rem;
     font-weight: 700;
 }
@@ -272,7 +272,7 @@ nav {
 }
 
 .hero-texts p {
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    font-size: clamp(0.5rem, 2.5vw, 1.1rem);
     margin-bottom: 1rem;
     font-family: var(--sub-text);
 }
@@ -310,7 +310,7 @@ nav {
     border-radius: inherit;
     background: linear-gradient(90deg, #fff, #7dffb3, #fff);
     background-size: 300% 300%;
-    animation: borderGlow 3s linear infinite;
+    animation: borderGlow 4s linear infinite;
     z-index: -1;
 }
 
@@ -356,17 +356,15 @@ nav {
         padding: 0 1rem;
     }
 
-    .hero-texts h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero-texts p {
-        font-size: 0.8rem;
-    }
-
     .hero-texts .button-cta {
         font-size: 0.8rem;
         padding: 0.8rem 1.2rem;
+    }
+
+    .hero { 
+        min-height: 40vh;
+        padding: 1rem; 
+        /* background-attachment: scroll;  */
     }
  }
 
