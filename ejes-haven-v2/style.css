@@ -40,6 +40,7 @@ nav {
     /* backdrop-filter: blur(10px); */
     position: fixed;
     top: 0;
+    z-index: 1000;
     width: 100%;
     height: 10%;
     display: flex;
@@ -243,20 +244,21 @@ nav {
 .hero {
     background: url(./images/hero-image.jpg) no-repeat center;
     background-size: cover;
-    /* background-attachment: fixed; */
     min-height: 100vh;
     display: flex;
-    /* flex-shrink: 0; */
     justify-content: center;
     align-items: center;
+    z-index: 0;
+    /* flex-shrink: 0; */
+    /* background-attachment: fixed; */
 }
 
 .hero-texts {
     text-align: center;
-    /* color: var(--text-color); */
     color: #000;
     margin-top: 2rem;
     /* flex-shrink: 0; */
+    /* color: var(--text-color); */
 }
 
 .hero-texts h2 {
@@ -286,16 +288,17 @@ nav {
     z-index: 1;
     cursor: pointer;
     transition: var(--background-color) 0.3s ease;
-    transition: transform 0.1s ease;
+    transition: transform 0.2s ease;
 }
 
-.hero-texts .button-cta:hover {
+.hero-texts .button-cta:hover::before {
     background-color: #45a049;
 }
 
-/* .hero-texts .button-cta:active {
+.hero-texts .button-cta:active {
     transform: translateY(2px);
-} */
+    background-color: #45a049;
+}
 
 /* Shiny border */
 .hero-texts .button-cta::before {
@@ -311,7 +314,23 @@ nav {
     z-index: -1;
 }
 
+.hero-texts .button-cta::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: var(--primary-color);
+    border-radius: inherit;
+    z-index: -1;
+} 
 
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
 
 
 
