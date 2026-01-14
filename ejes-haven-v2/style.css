@@ -343,8 +343,14 @@ nav {
 
 /* RESPONSIVENESS */
 @media (max-width: 767px) {
+    /* .search-section .search .search-button {
+    padding: 0.2rem 0.6rem;
+    margin-bottom: 5rem;
+    } */
+    
     .sidebar {
         display: block;
+        overflow: hidden;
     }
 
     .nav-links-section, .actions-section {
@@ -357,8 +363,16 @@ nav {
     }
 
     .hero-texts .button-cta {
-        font-size: 0.8rem;
-        padding: 0.8rem 1.2rem;
+        font-size: 0.5rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .hero-texts .button-cta::before {
+        inset: -1px;
+    }
+
+    .hero-texts .button-cta::after {
+        inset: 1px;
     }
 
     .hero { 
